@@ -31,6 +31,8 @@ product_locator = "div.product-list .product-card:nth-child(1) > a"
 add_to_cart_Locator = "#pd_add_to_cart"
 cart_page_locator =  "#header__container > header > div.header__middle > div.header__middle__right > div > div:nth-child(3) > div:nth-child(3) > div > div.cart-action > a"
 
+driver.maximize_window()
+time.sleep(2)
 
 def click(locator_value):
      WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR,locator_value))).click()
